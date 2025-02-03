@@ -4,6 +4,10 @@
   "description": "Nous allons tâcher de créer une API permettant d'effectuer des opérations CRUD sur les pokémons. Ce projet sera réalisé avec Express pour la gestion des routes et avec une base de donnée NoSQL.",
   "main": "build/index.js",
   "scripts": {
+    "prisma":{
+      "seed": "ts-node prisma/seed.ts"
+    },
+    "db:seed": "prisma db seed",
     "dev": "nodemon --exec ts-node ./src/index.ts",
     "start": "node ./build/index.js",
     "type-check": "tsc --noEmit",
@@ -27,7 +31,7 @@
   },
   "homepage": "https://github.com/vfourny/nodejs-pokedex-api#readme",
   "dependencies": {
-    "@prisma/client": "^6.1.0",
+    "@prisma/client": "^6.3.0",
     "@types/jsonwebtoken": "^9.0.7",
     "bcrypt": "^5.1.1",
     "express": "^4.21.2",
@@ -46,7 +50,7 @@
     "jest": "^29.7.0",
     "jest-mock-extended": "^4.0.0-beta1",
     "nodemon": "^3.1.9",
-    "prisma": "^6.1.0",
+    "prisma": "^6.3.0",
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
