@@ -6,11 +6,9 @@ import { getPokemonCards } from './pokemonCard.controller';
 export const pokemonCardRouter = Router();
 
 pokemonCardRouter.get('/', getPokemonCards);
-/*
-pokemonCardRouter.get('/:pokemonCardId', (_req: Request, res: Response, pokemonCardId) => {
-    res.status(200).send(`pokemonCard-ID ${_req.params.pokemonCardId}`);
-});
 
+pokemonCardRouter.get('/:pokemonCardId');
+/*
 pokemonCardRouter.post('/', (req: Request, res: Response) => {
     res.send(`pokemonCard-POST ${req.body.name}`);
 });
