@@ -30,6 +30,44 @@ async function main() {
   console.log('Seed completed!');
 }
 
+await prisma.pokemonCard.deleteMany();
+await prisma.pokemonCard.createMany({
+  data:[
+    {
+      id: 1,
+      name: 'Bulbasaur',
+      pokedexId: 1,
+      type: 4,
+      lifePoints: 70,
+      size: 0.7,
+      weight: 6.9,
+      imageUrl: 'https:www.pokepedia.fr/images/thumb/e/ef/Bulbizarre-RFVF.png/375px-Bulbizarre-RFVF.png'
+    },
+
+    {
+      id: 2,
+      name: 'MewTwo',
+      pokedexId: 150,
+      type: 11,
+      lifePoints: 70,
+      size: 2,
+      weight: 122,
+      imageUrl: 'https://www.pokepedia.fr/images/thumb/d/d8/Mewtwo-DEPS.png/375px-Mewtwo-DEPS.png'
+    },
+
+    {
+      id: 3,
+      name: 'Racaillou',
+      pokedexId: 74,
+      type: 13,
+      lifePoints: 70,
+      size: 0.4,
+      weight: 20,
+      imageUrl: 'https://www.pokepedia.fr/images/thumb/b/b2/Racaillou-RFVF.png/375px-Racaillou-RFVF.png'
+    }
+  ],
+});
+
 main()
   .catch((e) => {
     throw e;
