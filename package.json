@@ -4,10 +4,6 @@
   "description": "Nous allons tâcher de créer une API permettant d'effectuer des opérations CRUD sur les pokémons. Ce projet sera réalisé avec Express pour la gestion des routes et avec une base de donnée NoSQL.",
   "main": "build/index.js",
   "scripts": {
-    "prisma":{
-      "seed": "ts-node prisma/seed.ts"
-    },
-    "db:seed": "prisma db seed",
     "dev": "nodemon --exec ts-node ./src/index.ts",
     "start": "node ./build/index.js",
     "type-check": "tsc --noEmit",
