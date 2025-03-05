@@ -22,3 +22,20 @@ model PokemonCard{
   weight Float
   imageUrl String
 }
+
+model User{
+  id Int @id @default(autoincrement())
+  email String @unique
+  name String
+  password String
+  posts Post[] @relation(name: "Post_user")
+  authorId Int
+}
+
+model Post {
+  id Int @id @default(autoincrement())
+  title String
+  content String?
+  author User @relation(name: "Post_user", fields: [authorId], references: [id])
+  authorId Int
+}

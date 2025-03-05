@@ -12,5 +12,5 @@ export function stopServer() {
   server.close();
 }
 
-app.use('/pokemonCard', pokemonCardRouter);
-app.use('/pokemonCardId', pokemonCardRouter);
+app.use('/pokemon-cards', pokemonCardRouter);
+app.use('/pokemon-cards/:pokemonCardId', pokemonCardRouter);
