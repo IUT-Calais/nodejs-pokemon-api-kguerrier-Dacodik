@@ -144,7 +144,7 @@ Votre projet est probablement en train de devenir un peu bordélique. Il serait 
 
 ## Utilisateurs et accès authentifié
 
-Nous allons essayer d'ajouter des fonctionnalités de permissions afin que certains endpoint ne soient pas accessibles si vous n'êtes pas connectés. Par exemple il serait intéressant que seuls les utilisateurs authentifiés puissent créer, modifier ou supprimer des donnés.
+Nous allons essayer d'ajouter des fonctionnalités de permissions afin que certains endpoint ne soient pas accessibles si vous n'êtes pas connectés. Par exemple il serait intéressant que seuls les utilisateurs authentifiés puissent créer, modifier ou supprimer des données.
 
 ### Prisma
 

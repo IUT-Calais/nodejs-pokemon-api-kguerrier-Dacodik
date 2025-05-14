@@ -1,13 +1,20 @@
 
 import { Router } from 'express';
 import { Request, Response, NextFunction } from 'express';
-import { getPokemonCards } from './pokemonCard.controller';
+import { getPokemonCards, postPokemonCards } from './pokemonCard.controller';
 
 export const pokemonCardRouter = Router();
 
 pokemonCardRouter.get('/', getPokemonCards);
 
 pokemonCardRouter.get('/:pokemonCardId');
+
+pokemonCardRouter.post('/', postPokemonCards);
+
+pokemonCardRouter.patch('/:pokemonCardId');
+
+pokemonCardRouter.delete('/:pokemonCardId');
+
 /*
 pokemonCardRouter.post('/', (req: Request, res: Response) => {
     res.send(`pokemonCard-POST ${req.body.name}`);

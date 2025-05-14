@@ -65,6 +65,17 @@ async function main() {
     ],
   });
   console.log('Seed completed!');
+  await prisma.user.createMany({
+    data:[
+      {
+        id : 1,
+        name: "Adrien",
+        email: "adrienflenghi@ikmail.com",
+        password: "1234",
+        authorId: 1
+      }
+    ]
+  })
 }
 
 main()
